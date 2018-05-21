@@ -10,7 +10,7 @@ with open('LICENSE') as f:
 
 setup(
     name='pyga-camcal',
-    version='0.1.2',
+    version='0.1.3',
     description='Camera Calibration package',
     long_description=readme,
     author='Eivind Roson Eide',

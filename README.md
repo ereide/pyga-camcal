@@ -1,6 +1,6 @@
 # Setup
 
-Check that you have virtualenv installed.
+Check that you have virtualenv installed (linux).
 
 ```
     $pip install virtualenv
@@ -20,5 +20,28 @@ Install the requirments
     $pip install -r requirements.txt 
 ```
 
-Everything should be good to go
+Install the module
+```
+    $python setup.py build
+    $python setup.py install
+```
+
+
+Everything should be good to go. 
+
+The pip installed version of clifford is too slow for the purposes of optimazation,
+we therefore recommend installing the development version of clifford. 
+
+```
+    $source venv/bin/activate
+
+    $git submodule init 
+    $git submodule update
+
+    $cd extern/clifford
+    $python setup.py build
+    $python setup.py install
+```
+
+
 

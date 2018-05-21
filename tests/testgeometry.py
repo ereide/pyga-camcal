@@ -5,11 +5,11 @@ from clifford import g3c
 from numpy import pi, e
 import numpy as np
 
-from common.cgatools import (Sandwich, Dilator, Translator, Reflector, inversion, Rotor, Transversor, 
+from pygacal.common.cgatools import (Sandwich, Dilator, Translator, Reflector, inversion, Rotor, Transversor, 
                              I3, I5, VectorEquality, 
-                             MVEqual, MVto3DVec, VectoMV)
+                             MVEqual, MVto3DVec, VectoMV, ga_exp)
 
-from common.plotting import Plot3D
+from pygacal.common.plotting import Plot3D
 
 #TODO: Explicit imports
 from pygacal.geometry import *
@@ -19,7 +19,7 @@ from pygacal.geometry.planes import *
 from pygacal.rotation.costfunction import *
 
 
-from clifford_tools.common.g3c.core     import RotorLine2Line, ga_exp
+#from clifford_tools.common.g3c.core     import RotorLine2Line, ga_exp
 
 #TODO: breaks when adding this line
 #from clifford_tools.numerical.g3c.core  import RotorLine2Line, ga_exp, RotorPlane2Plane
@@ -59,7 +59,7 @@ class TestGeometryTransformations(unittest.TestCase):
         beta  = 0.43
         gamma = -0.21
 
-        x, y, z = 12.3, 45.6, 78.9
+        x, y, z = 1.23, 4.56, 78.9
 
         theta = np.array([alpha, beta, gamma])
         translation = np.array([x, y, z])

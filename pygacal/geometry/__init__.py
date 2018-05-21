@@ -1,9 +1,11 @@
 from clifford import g3c
 import numpy as np
 
-from pygacal.common.cgatools import Sandwich, Dilator, Translator, Reflector, inversion, Rotor, Transversor, I3, I5, VectorEquality, anticommuter, one
+from pygacal.common.cgatools import (Sandwich, Dilator, Translator, Reflector, 
+                                     inversion, Rotor, Transversor, I3, I5, 
+                                     VectorEquality, anticommuter, one, ga_exp)
 
-from clifford_tools.numerical.g3c.core import ga_exp
+#from clifford_tools.numerical.g3c.core import ga_exp
 
 #Defining variables
 layout = g3c.layout

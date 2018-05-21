@@ -72,6 +72,8 @@ class TestBenchmark(unittest.TestCase):
         plot.show(False)
         
     def testBenchmarkMinimizeErrorPlot(self):
+        fileprint = False
+
         sigma_R = 0.005
         sigma_T = 0.007
         N_training = 30
@@ -92,10 +94,11 @@ class TestBenchmark(unittest.TestCase):
 
             plot.addLine(line_real)
             plot.addLine(line_est)
-
-        timestring =time.strftime("%Y%m%d-%H%M%S")
-        figname = "../benchmarkreports/plot_%s.png" %timestring
-        plot.save(figname)
+        
+        if fileprint:
+            timestring =time.strftime("%Y%m%d-%H%M%S")
+            figname = "../benchmarkreports/plot_%s.png" %timestring
+            plot.save(figname)
 
     def testBenchmarkMinimizeErrorParameters(self):
         print("\nWARNING: VERY SLOW")
@@ -243,6 +246,7 @@ class TestBenchmark(unittest.TestCase):
             print("\n\n")
         plot.show(False)
 
+    @unittest.skip("Incorrect")
     def testExtendedLineRotation(self):
         print("\nRunning testExtendedLineRotation")
         print("")
