@@ -44,4 +44,8 @@ we therefore recommend installing the development version of clifford.
 ```
 
 
-
+Building docs:
+```
+    $cd docs/
+    $make html
+```
