@@ -290,3 +290,4 @@ def compare_model_lines(model_1, model_2, image_model, R):
     cv2.imshow("Projection", img)
     cv2.waitKey(0)
 
+

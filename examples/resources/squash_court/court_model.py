@@ -12,7 +12,7 @@ class SquashCourtModel(Model):
         Dimensions in mm
         Lines are the average of the red court lines
         
-        #New coordinates: x left, z towards front, y up, origin centred 10 m from wall negative z direction
+        New coordinates: x left, z towards front, y up, origin centred 10 m from wall negative z direction
     """
 
     def set_lines(self):
